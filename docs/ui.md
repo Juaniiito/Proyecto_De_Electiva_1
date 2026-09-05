@@ -18,7 +18,7 @@ Los diseños completos esta disponible en [Figma](https://www.figma.com/proto/qv
 3. Pantalla 3: Calendario
    Otra de las funciones es Calendario donde se ven las tareas como tal mensuales clasificadas por importancia, fecha limite (si tiene),      aunque tambien se podran ver por semana o volver a las diarias
    
-![screen2](Imagenes/Imagen3.png)
+![screen3](./images/Imagen3.png)
 
 # Referencias
 

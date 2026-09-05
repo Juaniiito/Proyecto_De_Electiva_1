@@ -1,8 +1,16 @@
-# Nombre de la aplicación
+# Taskflow - Metodo Cosecha
 
-Reemplace este texto con una descripción de su aplicación. Revise el archivo [HELP.md](HELP.md) donde hay mas información sobre como usar esta plantilla.
+Aplicación móvil para Android desarrollada en Kotlin que ofrece una solución completa para la gestión eficiente de tareas personales y académicas. Su diseño minimalista y funcional permite a los usuarios organizar sus actividades diarias con un enfoque estructurado y profesional.
 
-Autor(es): Nombre del estudiante
+## 🚀 Estado del Proyecto
+
+**Versión:** Adelanto v0.1.0 (Demo Funcional)
+
+El proyecto se encuentra en fase de desarrollo temprano. Actualmente se implementa una versión demo en Mockups que demuestra la interfaz de usuario y la navegación básica.
+
+Autor(es):Juan Manuel Ducuara Soache
+          Daniel Medina 
+          Valentina Prieto
 
 ## Referencias
 

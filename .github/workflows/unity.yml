@@ -1,0 +1,54 @@
+name: Unity CI
+on: 
+  workflow_dispatch:
+  # push:
+  #   branches: [ "main" ]
+  # pull_request:
+  #   branches: [ "main" ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        lfs: true
+    - uses: actions/cache@v3
+      with:
+        path: Library
+        key: Library-${{ hashFiles('Assets/**', 'Packages/**', 'ProjectSettings/**') }}
+        restore-keys: |
+          Library-
+    - name: Build project
+      uses: game-ci/unity-builder@v4
+      env:
+        UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+        UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+        UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+      with:
+        targetPlatform: Android
+    - uses: actions/upload-artifact@v4
+      with:
+        name: app-debug.apk
+        path: build/Android/Android.apk
+  firebase-test-lab:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+    - name: Download APK
+      uses: actions/download-artifact@v4
+      with:
+        name: app-debug.apk
+    - name: Display structure of downloaded files
+      run: ls -R
+    - id: 'auth'
+      if: ${{ hashFiles('Android.apk') != '' }}
+      uses: 'google-github-actions/auth@v2'
+      with:
+        credentials_json: '${{ secrets.GCP_FIREBASE_CREDENTIALS }}'
+    - name: 'Set up Cloud SDK'
+      if: ${{ hashFiles('Android.apk') != '' }}
+      uses: 'google-github-actions/setup-gcloud@v2'
+    - name: 'Running tests in Firebase Test Lab'
+      if: ${{ hashFiles('Android.apk') != '' }}
+      run: 'gcloud firebase test android run --app Android.apk --type robo --device model=MediumPhone.arm,version=30,locale=en,orientation=portrait'

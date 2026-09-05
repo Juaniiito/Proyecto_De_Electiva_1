@@ -7,7 +7,7 @@ Los diseños completos esta disponible en [Figma](https://www.figma.com/proto/qv
 1. Pantalla 1: INICIO
    Cuando el usuario ingrese a la aplicacion se encontrara con este organizador de tarea en listas con sus colores reconocibles
 
-![screen1](image/image.png)
+![screen1](./images/image.png)
 
 
 2. Pantalla 2: CREAR TAREA

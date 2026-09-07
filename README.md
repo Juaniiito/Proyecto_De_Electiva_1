@@ -9,8 +9,8 @@ Aplicación móvil para Android desarrollada en Kotlin que ofrece una solución 
 El proyecto se encuentra en fase de desarrollo temprano. Actualmente se implementa una versión demo en Mockups que demuestra la interfaz de usuario y la navegación básica.
 
 Autor(es):Juan Manuel Ducuara Soache
-          Daniel Medina 
-          Valentina Prieto
+          Edison Daniel Medina Godoy
+         Katlyn Valentina Prieto Tribalez
 
 ## Referencias
 

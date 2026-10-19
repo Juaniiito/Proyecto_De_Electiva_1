@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Proyecto_Electiva_1</string>
+    <string name="saludo">Hola Pedro Navajas</string>
+    <string name="buscar_tarea">Buscar Tareas...</string>
+    <string name="tareas_completadas_hoy">Todas las tareas de hoy están completadas</string>
+    <string name="hoy">Hoy</string>
+    <string name="manana">Mañana</string>
+    <string name="durante_semana">Durante la Semana</string>
+    <string name="agregar_tarea">+ Agregar Tarea</string>
+    <string name="siguiente">Siguiente &gt;</string>
+    <string name="volver">&lt; Volver</string>
+</resources>

@@ -1,6 +1,5 @@
-package com.clase.proyecto_electiva_2
+package com.clase.electiva_1_proyecto
 
-import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
@@ -10,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 
 class MainActivity : AppCompatActivity() {
 
-    // Lista maestra con TODAS las tareas (por ahora, datos de prueba)
+    // Lista maestra con TODAS las tareas (datos de prueba)
     private val todasLasTareas = mutableListOf(
         Tarea(1, "Desayuno con Sofía", "8:10 am", "Hoy", false),
         Tarea(2, "Presentación proyecto", "10:00 am", "Mañana", false),
@@ -22,19 +21,19 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // Configurar los 3 RecyclerViews
+        // Configurar los 3 RecyclerViews para cada sección
         configurarRecycler(R.id.recyclerHoy, "Hoy")
         configurarRecycler(R.id.recyclerManana, "Mañana")
         configurarRecycler(R.id.recyclerSemana, "Durante la Semana")
 
-        // Botón agregar (por ahora solo muestra un Toast)
+        // Botón agregar (placeholder por ahora)
         findViewById<Button>(R.id.btnAgregarTarea).setOnClickListener {
             Toast.makeText(this, "Próximamente: agregar tarea", Toast.LENGTH_SHORT).show()
         }
 
-        // Botón siguiente
+        // Botón siguiente (placeholder por ahora)
         findViewById<Button>(R.id.btnSiguiente).setOnClickListener {
-            startActivity(Intent(this, AvanceActivity::class.java))
+            Toast.makeText(this, "Próximamente: pantalla siguiente", Toast.LENGTH_SHORT).show()
         }
     }
 
@@ -48,9 +47,8 @@ class MainActivity : AppCompatActivity() {
         // Filtramos solo las tareas de esta sección
         val tareasDeSeccion = todasLasTareas.filter { it.seccion == seccion }.toMutableList()
 
-        // Creamos el adapter con un callback
+        // Creamos el adapter con un callback (qué hacer al hacer clic)
         val adapter = TareaAdapter(tareasDeSeccion) { tarea ->
-            // Se ejecuta cuando el usuario toca un checkbox o el ícono editar
             val estado = if (tarea.completada) "completada" else "pendiente"
             Toast.makeText(
                 this,

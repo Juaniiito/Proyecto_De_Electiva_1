@@ -1,22 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
-
-    <!-- Permiso para notificaciones (lo usarás más adelante) -->
-    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.clase.electiva_1_proyecto"
+    tools:replace="package">
 
     <application
         android:allowBackup="true"
-        android:dataExtractionRules="@xml/data_extraction_rules"
-        android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
-        tools:targetApi="36">
+        android:theme="@style/Theme.Proyecto_Electiva_2"
+        tools:replace="android:theme">
 
-        <!-- Pantalla principal (se abre al tocar el ícono) -->
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -26,10 +22,6 @@
             </intent-filter>
         </activity>
 
-        <!-- Pantalla secundaria -->
-        <activity
-            android:name=".AvanceActivity"
-            android:exported="false" />
-
     </application>
+
 </manifest>

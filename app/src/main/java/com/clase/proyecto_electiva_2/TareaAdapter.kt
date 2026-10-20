@@ -1,4 +1,4 @@
-package com.clase.proyecto_electiva_2
+package com.clase.electiva_1_proyecto
 
 import android.view.LayoutInflater
 import android.view.View
@@ -12,10 +12,6 @@ class TareaAdapter(
     private val onTareaClick: (Tarea) -> Unit
 ) : RecyclerView.Adapter<TareaAdapter.TareaViewHolder>() {
 
-    /**
-     * ViewHolder: guarda las referencias a las vistas de UN item.
-     * Así no tenemos que llamar findViewById cada vez que se recicla.
-     */
     class TareaViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val checkTarea: CheckBox = itemView.findViewById(R.id.checkTarea)
         val txtTituloTarea: TextView = itemView.findViewById(R.id.txtTituloTarea)
@@ -23,28 +19,19 @@ class TareaAdapter(
         val imgEditar: View = itemView.findViewById(R.id.imgEditar)
     }
 
-    /**
-     * Se llama cuando el RecyclerView necesita crear un nuevo item visual.
-     * Infla el XML item_tarea.xml.
-     */
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TareaViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.item_tarea, parent, false)
         return TareaViewHolder(view)
     }
 
-    /**
-     * Se llama para "pintar" los datos de una tarea en el ViewHolder.
-     * Aquí conectamos datos ↔ vistas.
-     */
     override fun onBindViewHolder(holder: TareaViewHolder, position: Int) {
         val tarea = listaTareas[position]
 
         holder.txtTituloTarea.text = tarea.titulo
         holder.txtHorarioTarea.text = tarea.horario
 
-        // Importante: quitar listener antes de setear el estado
-        // para que no se dispare al reciclar
+        // Quitar listener antes de setear el estado para evitar bugs
         holder.checkTarea.setOnCheckedChangeListener(null)
         holder.checkTarea.isChecked = tarea.completada
 

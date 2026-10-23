@@ -1,4 +1,4 @@
-package com.clase.electiva_1_proyecto
+package com.clase.proyecto_electiva_2
 
 /**
  * Modelo que representa UNA tarea en la app.

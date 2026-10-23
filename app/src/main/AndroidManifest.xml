@@ -10,6 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
 
+        <!-- Pantalla Principal -->
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -18,6 +19,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Pantalla Agregar Tarea -->
+        <activity
+            android:name=".AgregarTareaActivity"
+            android:exported="false" />
 
     </application>
 

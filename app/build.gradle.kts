@@ -4,13 +4,13 @@ plugins {
 }
 
 android {
-    namespace = "com.clase.electiva_1_proyecto"
-    compileSdk = 34
+    namespace = "com.clase.proyecto_electiva_2"
+    compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.clase.electiva_1_proyecto"
+        applicationId = "com.clase.proyecto_electiva_2"
         minSdk = 23
-        targetSdk = 34
+        targetSdk = 36
         versionCode = 1
         versionName = "1.0"
 

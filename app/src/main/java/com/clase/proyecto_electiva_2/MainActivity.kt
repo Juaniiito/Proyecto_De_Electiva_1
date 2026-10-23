@@ -9,7 +9,7 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.clase.electiva_1_proyecto.R
+import com.clase.proyecto_electiva_2.R
 
 class MainActivity : AppCompatActivity() {
 

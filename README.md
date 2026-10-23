@@ -13,13 +13,13 @@ Autor(es):Juan Manuel Ducuara Soache
          Katlyn Valentina Prieto Tribalez
 ## Restricciones y Requerimientos Técnicos
 
-### Requerimientos del Sistema
+### Requisitos del Sistema
 - **Plataforma:** Android 8.0 (API nivel 26) o superior.
-- **Lenguaje / Framework:** Kotlin.
-- **Entorno de desarrollo:** Android Studio.
+- **Lenguaje / Framework:** Kotlin
+- **Entorno de desarrollo:** Android Studio
 
 ### Restricciones
-- Requiere conexión a Internet activa para sincronización de datos.
+- Requiere conexión a Internet activada para sincronización de datos.
 - Compatible únicamente con orientación vertical (Portrait).
 - Almacenamiento local SQLite/Room limitado al dispositivo.
 ## Referencias

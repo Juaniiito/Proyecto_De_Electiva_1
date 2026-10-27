@@ -1,13 +1,13 @@
 package com.clase.proyecto_electiva_2
 
-/**
- * Modelo que representa UNA tarea en la app.
- * Es la "forma" que tienen los datos antes de mostrarse en pantalla.
- */
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity(tableName = "tabla_tareas")
 data class Tarea(
-    val id: Int,
+    @PrimaryKey(autoGenerate = true) val id: Int = 0,
     val titulo: String,
     val horario: String,
-    val seccion: String,          // "Hoy", "Mañana", "Durante la Semana"
+    val seccion: String,
     var completada: Boolean = false
 )

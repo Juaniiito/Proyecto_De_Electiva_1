@@ -18,6 +18,8 @@ class AgregarTareaActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_agregar_tarea)
+        // Habilita la flecha de retroceso en la barra superior
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         val editTitulo = findViewById<EditText>(R.id.editTitulo)
         val editHorario = findViewById<EditText>(R.id.editHorario)
@@ -74,5 +76,12 @@ class AgregarTareaActivity : AppCompatActivity() {
                 finish()
             }
         }
+
+    }
+    // Esta función detecta cuando presionas la flechita de atrás
+    override fun onSupportNavigateUp(): Boolean {
+        // Cierra esta pantalla y vuelve a MainActivity sin guardar nada
+        finish()
+        return true
     }
 }

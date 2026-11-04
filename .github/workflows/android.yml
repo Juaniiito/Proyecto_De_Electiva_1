@@ -20,7 +20,7 @@ jobs:
         cache: gradle
     - name: Generate Wrapper and Build with Gradle
       run: |
-        gradle wrapper || true
+        gradle wrapper --gradle-version 8.1.1 || true
         if [ -f "gradlew" ]; then
           chmod +x gradlew
           ./gradlew build

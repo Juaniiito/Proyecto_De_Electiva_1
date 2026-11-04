@@ -47,7 +47,7 @@ fun CalendarScreen(
             ) {
                 Text(
                     text = "No hay tareas programadas.",
-                    style = MaterialTheme.colorScheme.bodyLarge
+                    style = MaterialTheme.typography.bodyLarge
                 )
             }
         } else {

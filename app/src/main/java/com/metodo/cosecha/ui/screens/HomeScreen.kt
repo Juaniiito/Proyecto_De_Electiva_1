@@ -57,7 +57,7 @@ fun HomeScreen(
             ) {
                 Text(
                     text = "No hay tareas pendientes. ¡Crea una nueva!",
-                    style = MaterialTheme.colorScheme.bodyLarge
+                    style = MaterialTheme.typography.bodyLarge
                 )
             }
         } else {

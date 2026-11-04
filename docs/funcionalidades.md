@@ -12,3 +12,12 @@ Para el proyecto es importante elegir funcionalidades técnicas que sean realist
 2. Visualización de estadísticas básicas como rachas de productividad y porcentaje de tareas completadas
 3. Subtareas: Desglose de proyectos complejos en pasos más pequeños y manejables
 4. Modo offline: Funcionamiento completo sin conexión a internet
+
+## Restricciones y Requerimientos Técnicos
+
+- **Plataforma:** Android 8.0 (API nivel 26) o superior.
+- **Lenguaje / Framework:** Kotlin y Jetpack Compose con Material 3.
+- **Persistencia de Datos:** Almacenamiento local mediante SQLite / Room Database.
+- **Conectividad:** Funcionamiento completamente offline (Modo offline por defecto con Room).
+- **Orientación:** Compatible únicamente con orientación vertical (Portrait).
+- **Entorno de desarrollo:** Android Studio con Gradle.
